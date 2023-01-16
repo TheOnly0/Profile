@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Profile.MainPage"
+             Title="Profile">
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="Profile" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#186318"/>
+        </Grid>
+    </Shell.TitleView>
+
+
+    <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+                <!--Profile BG-->
+                
+                <Border Grid.Row="0" 
+                        Stroke="CornflowerBlue"
+                        StrokeThickness="0"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource GreenTxt}, Dark={StaticResource White}}"
+                        HorizontalOptions="Fill">
+
+                    <Image 
+                        Source="back.png" 
+                        HeightRequest="164"
+                        WidthRequest="414"
+                        />
+
+                </Border>
+                
+                
+
+                <!--Profile Circle-->
+                
+                <Border Grid.Row="1" 
+                        Stroke="white"
+                        StrokeThickness="3"
+                        Margin="17,-50,0,0"
+                        HorizontalOptions="Start"
+                        StrokeShape="Ellipse"
+                        BackgroundColor="White">
+
+                    <Image 
+                            Source="profile.png" 
+                            HeightRequest="90"
+                            WidthRequest="90"/>
+
+                </Border>
+                
+                
+
+                <!--Profile name & description-->
+                
+                <Label Grid.Row="2"  
+                       Text="Nkengfack Alaska Doe" 
+                       FontAttributes="Bold" 
+                       TextColor="#0E3A0E" 
+                       HorizontalTextAlignment="Start"  
+                       FontSize="17"
+                       Padding="17,0"/>
+                <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto,Auto" VerticalOptions="Center" HorizontalOptions="Start" Padding="17,0"
+                      Margin="0,4,0,0">
+                    <Label Grid.Column="0" Text="Chef de Block" FontSize="13" TextColor="Black"/>
+                    <Label Grid.Column="1" Text="•" FontSize="13" TextColor="Black"/>
+                    <Label Grid.Column="2" Text="Babengue" FontSize="13" TextColor="Black"/>
+
+                </Grid>
+                
+                
+
+                <!--Statistics-->
+                
+                <Border Grid.Row="4"
+                        BackgroundColor="#DFDFDF"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 8"
+                        Padding="8,0"
+                        HeightRequest="89"
+                        Margin="17,34,17,0"
+                        HorizontalOptions="Fill">
+
+                    <Grid RowDefinitions="*,*">
+
+                        <Grid Grid.Row="0" ColumnDefinitions="*,*,*">
+
+                            <Border Grid.Column="0"
+                                    StrokeThickness="0">
+                                <Label Text="25" FontSize="22" TextColor="#FF7F50" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Border>
+
+                            <Border Grid.Column="1"
+                                    StrokeThickness="0">
+                                <Label Text="2X" FontSize="22" TextColor="#FDC943" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Border>
+
+                            <Border Grid.Column="2"
+                                    StrokeThickness="0">
+                                <Label Text="250" FontSize="22" TextColor="#228B22" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Border>
+
+                        </Grid>
+
+                        <Grid Grid.Row="1" ColumnDefinitions="*,*,*">
+
+                            <Border Grid.Column="0"
+                                        StrokeThickness="0">
+                                <Label Text="Totalité de points" FontSize="13" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Start"
+                                       HorizontalTextAlignment="Center" Opacity="0.5"/>
+                            </Border>
+
+                            <Border Grid.Column="1"
+                                        StrokeThickness="0">
+                                <Label Text="2 fois à la tete du classement" FontSize="13" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Start"
+                                       HorizontalTextAlignment="Center" Opacity="0.5"/>
+                            </Border>
+
+                            <Border Grid.Column="2"
+                                        StrokeThickness="0">
+                                    <Label Text="Total nombre de KPI accumulés" FontSize="13" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Start"
+                                           HorizontalTextAlignment="Center" Opacity="0.5"/>
+                            </Border>
+                        </Grid>
+                    </Grid>
+
+
+                </Border>
+                
+                
+
+                <!--Navigation Menu-->
+
+                <Border Grid.Row="5"
+                        StrokeThickness="0"
+                        Padding="8,0"
+                        HeightRequest="89"
+                        Margin="17,20,17,0"
+                        HorizontalOptions="Fill">
+
+                    <Grid RowDefinitions="*,*">
+
+                        <Grid Grid.Row="0" ColumnDefinitions="*,*,*">
+
+                            <Button Grid.Column="0" Text="Personal Info" FontSize="13" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center"
+                                    Opacity="0.85"
+                                    Background="Transparent"
+                                    BorderWidth="0"
+                                    Padding="0,0"/>
+
+                            <Button Grid.Column="1" Text="Login and Security" FontSize="13" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"
+                                    Opacity="0.85"
+                                    Background="Transparent"
+                                    BorderWidth="0"
+                                    Padding="0,0"/>
+
+                            <Button Grid.Column="2" Text="Profile Info" FontSize="13" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center"
+                                    Opacity="0.85"
+                                    Background="Transparent"
+                                    BorderWidth="0"
+                                    Padding="0,0"/>
+
+                        </Grid>
+
+                        <Line Grid.Row="1"
+                              Stroke="#6BB16B"
+                              X2="115"
+                              StrokeThickness="3"
+                              Margin="0,-2,0,0"
+                              HorizontalOptions="Center"
+                              StrokeLineCap="Flat"/>
+
+                        <Border Grid.Row="1"
+                                Margin="0,0,0,42"
+                                BackgroundColor="#6BB16B"
+                                StrokeThickness="0"
+                                HeightRequest="1.5"
+                                HorizontalOptions="Fill"
+                                />
+
+                    </Grid>
+
+
+                </Border>
+                
+                
+
+                <!--Login Form-->
+
+                <Border Grid.Row="6"
+                        StrokeThickness="0"
+                        Padding="8,0"
+                        HeightRequest="89"
+                        Margin="17,0,17,0"
+                        HorizontalOptions="Fill">
+
+                    <Grid Grid.Row="0" RowDefinitions="*,*">
+
+                        <Grid Grid.Row="0" ColumnDefinitions="*,*">
+
+                            <Label Grid.Column="0" Text="Username" FontSize="13" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Start"
+                                   Opacity="0.85" FontAttributes="Bold"/>
+
+                            <Button Grid.Column="1" BackgroundColor="#CBDFE8" Text="Edit" FontSize="13" TextColor="#67C6F2" HorizontalOptions="End" 
+                                    VerticalOptions="Start"
+                                    Padding="12,2,12,2"/>
+
+                        </Grid>
+                        <Entry Grid.Row="1" x:Name="Username"
+                            Placeholder="@user300999"
+                            HeightRequest="0" 
+                            Margin="-10,-55,0,0" 
+                            Keyboard="Email"/>
+
+                    </Grid>
+
+
+                </Border>
+
+                <Border Grid.Row="7"
+                        StrokeThickness="0"
+                        Padding="8,0"
+                        HeightRequest="89"
+                        HorizontalOptions="Fill"
+                        Margin="17,-10,17,0">
+
+                    <Grid Grid.Row="0" RowDefinitions="*,*">
+
+                        <Grid Grid.Row="0" ColumnDefinitions="*,*">
+
+                            <Label Grid.Column="0" Text="Password" FontSize="13" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Start"
+                                       Opacity="0.85" FontAttributes="Bold"/>
+
+                            <Button Grid.Column="1" BackgroundColor="#CBDFE8" Text="Edit" FontSize="13" TextColor="#67C6F2" HorizontalOptions="End" 
+                                        VerticalOptions="Start"
+                                        Padding="12,2,12,2"/>
+
+                        </Grid>
+                        <Entry Grid.Row="1" x:Name="Password"
+                               Placeholder="********"
+                               HeightRequest="0" 
+                               Margin="-10,-55,0,0" 
+                               Keyboard="Text"
+                               IsPassword="True"/>
+
+                    </Grid>
+
+
+                </Border>
+                
+                
+                
+                
+                <!--Footer-->
+
+                <Border Grid.Row="8"
+                        StrokeThickness="0"
+                        Margin="0,111,0,0"
+                        HeightRequest="80"
+                        VerticalOptions="End"
+                        HorizontalOptions="Fill"
+                        BackgroundColor="#E9F3E9"
+                        StrokeShape="RoundRectangle 8">
+
+                        <Grid Grid.Row="0" ColumnDefinitions="*,*,*,*,*">
+
+                            <ImageButton 
+                                Grid.Column="0"
+                                Source="trend.png" 
+                                HeightRequest="37"
+                                WidthRequest="37"
+                                Background="Transparent"/>
+                            
+                            <ImageButton 
+                                Grid.Column="1"
+                                Source="notif.png" 
+                                HeightRequest="24"
+                                WidthRequest="24"
+                                Background="Transparent"/>
+                            
+                            <Border Grid.Column="1"
+                                    StrokeThickness="0"
+                                    BackgroundColor="#F96565"
+                                    StrokeShape="RoundRectangle 100"
+                                    HeightRequest="16"
+                                    WidthRequest="25"
+                                    Margin="20,0,0,20">
+                                <Label Text="99" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                       TextColor="White" FontFamily="Roboto" FontSize="11"/>
+                            </Border>
+                            
+                            <ImageButton 
+                                Grid.Column="2"
+                                Source="user.png" 
+                                HeightRequest="24"
+                                WidthRequest="24"
+                                Background="Transparent"/>
+                            
+                            <ImageButton 
+                                Grid.Column="3"
+                                Source="cup.png" 
+                                HeightRequest="24"
+                                WidthRequest="24"
+                                Background="Transparent"/>
+                            
+                            <ImageButton 
+                                Grid.Column="4"
+                                Source="menu.png" 
+                                HeightRequest="24"
+                                WidthRequest="24"
+                                Background="Transparent"/>
+
+                        </Grid>
+
+
+                </Border>
+
+
+
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
